@@ -38,7 +38,12 @@ This collection of templates supports the CentOS and Rocky Linux distributions f
 ### Core Features Configured
 
 - Cron - control when cron jobs run
-- Hardware - automatically apply custom configuration for GPU cards, machine models, NIC cards, NIC drivers and storage controllers if present
+- Hardware - automatically apply custom configuration for the following if detected:
+    - GPU cards
+    - Machine models
+    - NIC cards
+    - NIC drivers
+    - Storage controllers
 - Iptables - provides a basic yet extensible set of IP tables rules
 - Network - comprehensive client network configuration
 - Logrotate - rotation policies of key system logs
