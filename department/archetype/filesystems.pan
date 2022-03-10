@@ -30,10 +30,11 @@ variable DEFAULT_MKFSOPTS_XFS ?= '-l version=2 -i size=512 -n size=4096';
 
 # Set partion label type for each physical device in use
 '/system/blockdevices/physical_devs' = {
+    ph_devs = dict();
     foreach (disk; disk_config; DISK_PARTITIONING) {
-        SELF[disk]['label'] = disk_config['table'];
+        ph_devs = merge(ph_devs, dict(disk, dict('label', disk_config['table'])) )
     };
-    SELF;
+    ph_devs;
 };
 
 function partition_disk = {
