@@ -43,7 +43,7 @@ variable ip_tables_rules ?= list();
 variable ip_tables_rules = {
     rules = list();
     foreach (k; v; ip_sources) {
-        rules = append(SELF, merge(rule_defaults, dict('source', v)));
+        rules = append(rules, merge(rule_defaults, dict('source', v)));
     };
     rules;
 };
