@@ -17,7 +17,7 @@ include if (length(HW_RAID_CARDS) > 1) {
 };
 
 variable number_of_raid_cards = if (length(HW_RAID_CARDS) > 2) {
-    error('You need to add extra "include if (length(HW_RAID_CARDS) > x)" statements in the template "features/core/hardware/storage/config" to handle more than 2 raid cards.');
+    error("You need to add extra 'include if (length(HW_RAID_CARDS) > x)' statements in the template 'features/core/hardware/storage/config' to handle more than 2 raid cards.");
 }
 else {
     SELF;

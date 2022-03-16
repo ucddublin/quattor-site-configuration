@@ -2,7 +2,7 @@ unique template features/core/motd/config;
 
 include 'components/filecopy/config';
 
-variable MOTD_NODE_INFO ?= "";
+variable MOTD_NODE_INFO ?= '';
 
 variable motd_branch = format(
     '%s (%s)',

@@ -41,7 +41,7 @@ include if (length(NETWORK_DRIVERS) > 7) {
 };
 
 variable number_of_network_drivers = if (length(NETWORK_DRIVERS) > 8) {
-    error('You need to add extra "include if (length(NETWORK_DRIVERS) > x)" statements in the template "features/core/hardware/network/config" to handle more than 8 network interfaces.');
+    error("You need to add extra 'include if (length(NETWORK_DRIVERS) > x)' statements in the template 'features/core/hardware/network/config' to handle more than 8 network interfaces.");
 }
 else {
     SELF;
@@ -81,7 +81,7 @@ include if (length(NETWORK_CARDS) > 7) {
 };
 
 variable number_of_network_cards = if (length(NETWORK_CARDS) > 8) {
-    error('You need to add extra "include if (length(NETWORK_CARDS) > x)" statements in the template "features/core/hardware/network/config" to handle more than 8 network interfaces.');
+    error("You need to add extra 'include if (length(NETWORK_CARDS) > x)' statements in the template 'features/core/hardware/network/config' to handle more than 8 network interfaces.");
 }
 else {
     SELF;
