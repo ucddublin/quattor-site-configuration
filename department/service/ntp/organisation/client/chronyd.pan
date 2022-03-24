@@ -22,7 +22,7 @@ variable time_server_options = {
 # Configure chronyd
 include 'metaconfig/chrony/config';
 
-prefix "/software/components/metaconfig/services/{/etc/chrony.conf}";
+prefix '/software/components/metaconfig/services/{/etc/chrony.conf}';
 'contents' ?= dict();
 'contents' = merge(SELF, dict(
     'server', time_server_options,

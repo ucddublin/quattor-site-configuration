@@ -11,7 +11,7 @@ variable KS_INSTALL_PACKAGES ?= list();
 variable KS_INSTALL_PACKAGES = append(SELF, 'dkms');
 '/software/packages' = pkg_repl('dkms');
 
-# Remove packages associated with the open-source Nvidia "nouveau" driver
+# Remove packages associated with the open-source Nvidia 'nouveau' driver
 variable KS_INSTALL_PACKAGES = merge(SELF, list('-xorg-x11-drivers', '-xorg-x11-drv-nouveau'));
 '/software/packages' = pkg_del('xorg-x11-drivers');
 '/software/packages' = pkg_del('xorg-x11-drv-nouveau');

@@ -25,7 +25,7 @@ include if (length(GPU_CARDS) > 3) {
 };
 
 variable number_of_graphics_cards = if (length(GPU_CARDS) > 4) {
-    error('You need to add extra "include if (length(GPU_CARDS) > x)" statements in the template "features/core/hardware/graphics/config" to handle more than 4 graphics cards.');
+    error("You need to add extra 'include if (length(GPU_CARDS) > x)' statements in the template 'features/core/hardware/graphics/config' to handle more than 4 graphics cards.");
 }
 else {
     SELF;
