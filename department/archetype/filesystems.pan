@@ -37,7 +37,7 @@ variable DEFAULT_MKFSOPTS_XFS ?= '-l version=2 -i size=512 -n size=4096';
     ph_devs;
 };
 
-function partition_disk = {
+function partition_disks = {
     ps = dict();
     foreach (disk; disk_config; DISK_PARTITIONING) {
         foreach (number; partition; disk_config['parts']) {
@@ -171,5 +171,5 @@ function create_filesystems = {
     return(fs);
 };
 
-'/system/blockdevices/partitions' = partition_disk();
+'/system/blockdevices/partitions' = partition_disks();
 '/system/filesystems' = create_filesystems();
