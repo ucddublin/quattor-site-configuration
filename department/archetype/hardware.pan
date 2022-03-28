@@ -13,10 +13,10 @@ final variable HW_RAID_CARDS = {
     card_list = list();
     if (path_exists('/hardware/cards/raid') && is_defined(value('/hardware/cards/raid'))) {
         foreach (k; v; value('/hardware/cards/raid')) {
-            object_path1 = format('/hardware/cards/raid/%s/manufacturer', k);
-            object_path2 = format('/hardware/cards/raid/%s/name', k);
-            if (path_exists(object_path1) && !match(value(object_path1), ' ') && path_exists(object_path2) && !match(value(object_path2), ' ')) {
-                card_list = append(card_list, to_lowercase(join('-', value(object_path1), value(object_path2))));
+            raid_manufacturer = format('/hardware/cards/raid/%s/manufacturer', k);
+            raid_vendor = format('/hardware/cards/raid/%s/name', k);
+            if (path_exists(raid_manufacturer) && !match(value(raid_manufacturer), ' ') && path_exists(raid_vendor) && !match(value(raid_vendor), ' ')) {
+                card_list = append(card_list, to_lowercase(join('-', value(raid_manufacturer), value(raid_vendor))));
             };
         };
     };
@@ -27,9 +27,9 @@ final variable HW_RAID_CARDS = {
 final variable NETWORK_DRIVERS = {
     driver_list = list();
     foreach (k; v; value('/hardware/cards/nic')) {
-        object_path = format('/hardware/cards/nic/%s/driver', k);
-        if (path_exists(object_path) && !match(value(object_path), ' ')) {
-            driver_list = append(driver_list, value(object_path));
+        nic_driver = format('/hardware/cards/nic/%s/driver', k);
+        if (path_exists(nic_driver) && !match(value(nic_driver), ' ')) {
+            driver_list = append(driver_list, value(nic_driver));
         };
     };
     driver_list;
@@ -39,9 +39,9 @@ final variable NETWORK_DRIVERS = {
 final variable NETWORK_CARDS = {
     card_list = list();
     foreach (k; v; value('/hardware/cards/nic')) {
-        object_path = format('/hardware/cards/nic/%s/model', k);
-        if (path_exists(object_path) && !match(value(object_path), ' ')) {
-            card_list = append(card_list, value(object_path));
+        nic_model = format('/hardware/cards/nic/%s/model', k);
+        if (path_exists(nic_model) && !match(value(nic_model), ' ')) {
+            card_list = append(card_list, value(nic_model));
         };
     };
     card_list;
