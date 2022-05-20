@@ -17,10 +17,6 @@ prefix '/software/components/accounts';
     dict('team', dict('gid', 2000)),
 );
 
-# Add the 'ssh' group to the list 'AllowGroups' in /etc/ssh/sshd_config
-variable SSHD_ALLOW_GROUPS ?= list();
-variable SSHD_ALLOW_GROUPS = append(SELF, 'ssh');
-
 # Initialise a list of ordinary user accounts to create
 variable ordinary_users = list();
 
