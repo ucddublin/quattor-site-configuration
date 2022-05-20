@@ -24,10 +24,14 @@ else {
     'desk';
 };
 
+# Include user account access control template to get GRN strings
+include 'common/core/accounts/access-control';
+
 variable motd = format(
     file_contents('features/core/motd/files/template.txt'),
     file_contents('features/core/motd/files/aquilon.txt'),
     value('/system/network/hostname'),
+    HOST_USERACCESS_MAP[format('eon_id_%s', value('/system/owner_eon_id'))]['grn'],
     value('/hardware/location'),
     value('/hardware/sysloc/room'),
     rack,

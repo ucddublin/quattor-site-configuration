@@ -12,7 +12,7 @@ final variable NVIDIA_DRIVER_VERSION = nvidia_driver_version_os_map[value('/syst
 # Define a CUDA version for each supported OS major version
 final variable cuda_version_os_map = dict(
     '7x', '10.2.89-1',
-    '8x', '11.6.1-1',
+    '8x', '11.6.2-1',
 );
 
 # Define the Nvidia CUDA version used

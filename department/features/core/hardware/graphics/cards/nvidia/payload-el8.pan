@@ -17,6 +17,5 @@ unique template features/core/hardware/graphics/cards/nvidia/payload-el8;
 '/software/packages' = pkg_repl('nvidia-settings', format(NVIDIA_DRIVER_VERSION + '.%s', OS_PLATFORM), PKG_ARCH_DEFAULT);
 '/software/packages' = pkg_repl('nvidia-xconfig', format(NVIDIA_DRIVER_VERSION + '.%s', OS_PLATFORM), PKG_ARCH_DEFAULT);
 
-
 # Install DNF plugin for Nvidia kernel module packages
 '/software/packages' = pkg_repl('dnf-plugin-nvidia');

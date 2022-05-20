@@ -5,12 +5,30 @@ variable SSH_SCHEMA_VERSION = '7.4';
 include 'components/ssh/config';
 include 'components/systemd/config';
 
-# Initialise list of allowed groups
+# Only allow authentication by password if the host is not edge facing
+variable password_auth = if (is_defined(EDGE_HOST) && EDGE_HOST == true) 'no';
+variable password_auth ?= 'yes';
+
+# Only allow root login (and only via public key authentication) if the host is
+# not edge facing
+variable permit_root_login = if (is_defined(EDGE_HOST) && EDGE_HOST == true) 'no';
+variable permit_root_login ?= 'without-password';
+
+# Initialise list of allowed groups if not already initialised
 variable SSHD_ALLOW_GROUPS ?= list();
 
-# Only allow authentication by password if the host is not public facing
-variable password_authentication = if (is_defined(SSHD_DISABLE_PASSWORD_LOGIN) && SSHD_DISABLE_PASSWORD_LOGIN == true) 'no';
-variable password_authentication ?= 'yes';
+# Add the 'ssh' group to the list 'AllowGroups' in /etc/ssh/sshd_config so only
+# known users can attempt to login
+variable SSHD_ALLOW_GROUPS = append(SELF, 'ssh');
+
+# Add the 'root' group to the list 'AllowGroups' in /etc/ssh/sshd_config if the
+# host is not edge facing
+variable SSHD_ALLOW_GROUPS = if (is_defined(EDGE_HOST) && EDGE_HOST == true) {
+    SELF;
+}
+else {
+    append(SELF, 'root');
+};
 
 # Disable printing the MOTD twice on EL8
 final variable print_motd = if (value('/system/os/version/major') >= 8) {
@@ -28,9 +46,9 @@ else {
     'GSSAPIAuthentication', 'yes',
     'GSSAPICleanupCredentials', 'yes',
     'LogLevel', 'VERBOSE',
-    'PasswordAuthentication', password_authentication,
+    'PasswordAuthentication', password_auth,
     'PermitEmptyPasswords', 'no',
-    'PermitRootLogin', 'no',
+    'PermitRootLogin', permit_root_login,
     'Port', 22,
     'PrintLastLog', 'yes',
     'PrintMotd', print_motd,

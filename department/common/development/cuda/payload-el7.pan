@@ -56,7 +56,7 @@ unique template common/development/cuda/payload-el7;
 '/software/packages' = pkg_repl(format('cuda-visual-tools-%s', CUDA_PKG_NAME_SUFFIX), CUDA_VERSION, PKG_ARCH_DEFAULT);
 
 # Install CUDA Deep Neural Network
-'/software/packages' = pkg_repl(format('cudnn-%s', CUDA_PKG_NAME_SUFFIX), '7.6.5.32-1', PKG_ARCH_DEFAULT);
+'/software/packages' = pkg_repl(format('cudnn-%s', CUDA_PKG_NAME_SUFFIX), '7.6.5.32-2', PKG_ARCH_DEFAULT);
 
 # Install dependencies for CUDA samples
 '/software/packages' = pkg_repl('vulkan');

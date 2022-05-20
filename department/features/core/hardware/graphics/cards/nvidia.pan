@@ -22,5 +22,9 @@ include 'common/versions/nvidia';
 # Install Nvidia driver
 include format('features/core/hardware/graphics/cards/nvidia/payload-el%s', value('/system/os/version/major'));
 
-# Install ncurses-devel for nvtop
+# Install 'nvtop' for monitoring processes that use GPU resources
+'/software/packages' = pkg_repl('nvtop', format('2.0.0-1.%s', OS_PLATFORM), PKG_ARCH_DEFAULT);
+
+# Install 'ncurses-devel' required to build 'nvtop' if you need to package it
+# for a new OS major version
 '/software/packages' = pkg_repl('ncurses-devel');
