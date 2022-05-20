@@ -58,6 +58,10 @@ include 'components/systemd/config';
 
     # Timezone data
     pkg_repl('tzdata');
+
+    # TCL tool command language
+    pkg_repl('tcl');
+    pkg_repl('tcllib');
 };
 
 # Handle change of package name for dstat on going from EL7 to EL8, was under
