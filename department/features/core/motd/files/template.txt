@@ -1,5 +1,6 @@
 %s
-          Hostname: %s 
+          Hostname: %s
+        Host Group: %s
           Location: %s %s %s
             Branch: %s
          Archetype: %s

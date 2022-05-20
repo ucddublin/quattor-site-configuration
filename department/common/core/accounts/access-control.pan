@@ -4,11 +4,15 @@ unique template common/core/accounts/access-control;
 variable HOST_USERACCESS_MAP = dict(
     # /domain/sedf/new-host
     'eon_id_1', dict(
+        'grn', '/domain/sedf/new-host',
+
         'default_users', list(),
     ),
 
     # /domain/sedf/cw
     'eon_id_2', dict(
+        'grn', '/domain/sedf/cw',
+
         'principals', list(
             'james',
         ),
@@ -23,6 +27,8 @@ variable HOST_USERACCESS_MAP = dict(
 
     # /domain/sp/ap
     'eon_id_3', dict(
+        'grn', '/domain/sp/ap',
+
         'default_users', list(
             'thomas', 'john',
         ),
@@ -35,7 +41,7 @@ variable HOST_USERACCESS_MAP = dict(
         'root_pw', 'PASSWDPASSWDPASSWDPASSWD',
     ),
 
-    # Default root password for all hosts
+    # Default root password for all hosts if not defined above
     'defaults', dict(
         'root_pw', 'PASSWDPASSWDPASSWDPASSWD',
     ),
