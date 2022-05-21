@@ -37,7 +37,7 @@ variable e = if (value('/hardware/cpu/0/arch') == 'x86_64') {
     };
 }
 else if (value('/hardware/cpu/0/arch') != value('/system/os/architecture')) {
-    error('CPU and OS architectures do not match.');
+    error('CPU and OS architectures are not compatible.');
 };
 
 # Configure repositories
