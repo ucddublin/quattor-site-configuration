@@ -7,7 +7,7 @@ include 'quattor/profile_base';
 '/system/archetype/name' = ARCHETYPE;
 
 # Define the snapshot value and assign the site release that value
-final variable SNAPSHOT = '2022-05-01';
+final variable SNAPSHOT = '2023-03-17';
 '/system/siterelease' = SNAPSHOT;
 
 # Configure Automatic Installation Infrastructure, AII
