@@ -31,12 +31,7 @@ include 'common/core/sshd';
 include 'config/os/updates';
 
 # Check that CPU and OS architectures are the same and err if they are not
-variable e = if (value('/hardware/cpu/0/arch') == 'x86_64') {
-    if (value('/system/os/architecture') != 'x86_64' && value('/system/os/architecture') != 'i386') {
-        error(format('If CPU architecture is x86_64 then OS architecture must be x86_64 or i386 but CPU is %1$s and OS is %2$s', value('/hardware/cpu/0/arch'), value('/system/os/architecture')));
-    };
-}
-else if (value('/hardware/cpu/0/arch') != value('/system/os/architecture')) {
+variable e = if (value('/hardware/cpu/0/arch') != value('/system/os/architecture')) {
     error('CPU and OS architectures are not compatible.');
 };
 
