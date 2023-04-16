@@ -4,7 +4,7 @@ unique template service/profileserver/department/client/config;
 
 # Configure profileserver settings manually, not from database as the server is
 # not aquilon-managed
-'/system/services/profileserver/servers' = append(SELF, 'aquilon.domain.tld');
+'/system/services/profileserver/servers' = append(SELF, 'aquilon.example.net');
 '/system/services/profileserver/server_ips' = append(SELF, '192.168.1.1');
 
 # Define profile URL

@@ -4,7 +4,7 @@ unique template common/core/accounts/keys-and-config;
 final variable ACCOUNT_CONFIG = dict(
     'james', dict(
         'name', 'James Joyce',
-        'email', 'james.joyce@domain.tld',
+        'email', 'james.joyce@example.net',
         'id', 1000,
         'extra_groups', list('ssh', 'team', 'wheel'),
         'keys', list('KEYKEYKEYKEY'),
@@ -12,7 +12,7 @@ final variable ACCOUNT_CONFIG = dict(
 
     'kate', dict(
         'name', 'Kate O’Brien',
-        'email', 'kate.obrien@domain.tld',
+        'email', 'kate.obrien@example.net',
         'id', 1001,
         'extra_groups', list('ssh', 'team'),
         'keys', list('KEYKEYKEYKEY'),
@@ -20,7 +20,7 @@ final variable ACCOUNT_CONFIG = dict(
 
     'maeve', dict(
         'name', 'Maeve Binchy',
-        'email', 'maeve.binchy@domain.tld',
+        'email', 'maeve.binchy@example.net',
         'id', 1002,
         'extra_groups', list('ssh', 'team'),
         'keys', list('KEYKEYKEYKEY'),
@@ -28,7 +28,7 @@ final variable ACCOUNT_CONFIG = dict(
 
     'thomas', dict(
         'name', 'Thomas Edwin Nevin',
-        'email', 'thomas.nevin@domain.tld',
+        'email', 'thomas.nevin@example.net',
         'id', 1003,
         'extra_groups', list('ssh', 'team'),
         'keys', list('KEYKEYKEYKEY'),
@@ -36,7 +36,7 @@ final variable ACCOUNT_CONFIG = dict(
 
     'john', dict(
         'name', 'John James Nolan',
-        'email', 'john.nolan@domain.tld',
+        'email', 'john.nolan@example.net',
         'id', 1004,
         'extra_groups', list('ssh', 'team'),
         'keys', list('KEYKEYKEYKEY'),

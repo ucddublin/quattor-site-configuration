@@ -27,7 +27,7 @@ prefix '/software/components/iptables';
     'jump', 'ACCEPT',
 ));
 
-# Accept all connections with a domain.tld cable network address
+# Accept all connections with a example.net cable network address
 'filter/rules' = append(SELF, dict(
     'command', '-A',
     'chain', 'INPUT',
@@ -35,7 +35,7 @@ prefix '/software/components/iptables';
     'jump', 'ACCEPT',
 ));
 
-# Accept all connections with a domain.tld wireless network address
+# Accept all connections with a example.net wireless network address
 'filter/rules' = append(SELF, dict(
     'command', '-A',
     'chain', 'INPUT',

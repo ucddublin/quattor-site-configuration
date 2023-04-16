@@ -1,7 +1,7 @@
 structure template repository/quattor/externals/el7-noarch;
 
 'name' = 'quattor-externals-el7-noarch';
-'owner' = 'support@domain.tld';
+'owner' = 'support@example.net';
 'protocols' = list(
     dict(
         'name', 'http',

@@ -1,11 +1,11 @@
 structure template repository/epel/7-i386;
 
 'name' = 'epel-7-i386';
-'owner' = 'support@domain.tld';
+'owner' = 'support@example.net';
 'protocols' = list(
     dict(
         'name', 'http',
-        'url', 'http://mirror.domain.tld/pub/linux/epel/7Server/i386/',
+        'url', 'http://mirror.example.net/pub/linux/epel/7Server/i386/',
     ),
 );
 

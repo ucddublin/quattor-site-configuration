@@ -1,7 +1,7 @@
 structure template repository/quattor/release/noarch;
 
 'name' = 'quattor-release';
-'owner' = 'support@domain.tld';
+'owner' = 'support@example.net';
 'protocols' = list(
     dict(
         'name', 'http',

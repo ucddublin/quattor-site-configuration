@@ -1,11 +1,11 @@
 structure template repository/site/perl/el8-noarch;
 
 'name' = 'site-perl-el8-noarch';
-'owner' = 'support@domain.tld';
+'owner' = 'support@example.net';
 'protocols' = list(
     dict(
         'name', 'http',
-        'url', 'http://aquilon.domain.tld/repos/perl/noarch/el8/',
+        'url', 'http://aquilon.example.net/repos/perl/noarch/el8/',
     ),
 );
 

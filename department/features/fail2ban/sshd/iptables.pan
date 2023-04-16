@@ -2,7 +2,7 @@ unique template features/fail2ban/sshd/iptables;
 
 # Add basic set of iptables rules (component is included in this template)
 # Default policy is to DROP all incoming packets that do not come from an IP
-# address within domain.tld
+# address within example.net
 # This is included here in case the 'fail2ban/sshd' feature is compiled before
 # 'core/iptables' feature and because we are extending the iptables ruleset in
 # this feature

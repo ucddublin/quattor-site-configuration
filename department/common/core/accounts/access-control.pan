@@ -33,7 +33,7 @@ variable HOST_USERACCESS_MAP = dict(
             'thomas', 'john',
         ),
 
-        'calculator.domain.tld', list(
+        'calculator.example.net', list(
             'thomas', 'john', 'samuel',
         ),
 

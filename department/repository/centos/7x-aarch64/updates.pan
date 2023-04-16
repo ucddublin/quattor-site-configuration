@@ -1,7 +1,7 @@
 structure template repository/centos/7x-aarch64/updates;
 
 'name' = 'centos-7x-aarch64-updates';
-'owner' = 'support@domain.tld';
+'owner' = 'support@example.net';
 'protocols' = list(
     dict(
         'name', 'http',

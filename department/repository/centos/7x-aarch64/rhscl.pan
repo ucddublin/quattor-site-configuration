@@ -1,7 +1,7 @@
 structure template repository/centos/7x-aarch64/rhscl;
 
 'name' = 'centos-7x-aarch64-rhscl';
-'owner' = 'support@domain.tld';
+'owner' = 'support@example.net';
 'protocols' = list(
     dict(
         'name', 'http',

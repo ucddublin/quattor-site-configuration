@@ -53,4 +53,4 @@ include 'common/filesystems/logic/default-swap-size';
 variable FILESYSTEM_LAYOUT = 'common/filesystems/extendable';
 
 # Configure root mail address
-'/system/rootmail' ?= 'root@aquilon.domain.tld';
+'/system/rootmail' ?= 'root@aquilon.example.net';

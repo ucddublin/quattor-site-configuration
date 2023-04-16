@@ -1,7 +1,7 @@
 structure template repository/centos/7x-aarch64/kernel/rpi2;
 
 'name' = 'centos-7x-aarch64-kernel-rpi2';
-'owner' = 'support@domain.tld';
+'owner' = 'support@example.net';
 'protocols' = list(
     dict(
         'name', 'http',
