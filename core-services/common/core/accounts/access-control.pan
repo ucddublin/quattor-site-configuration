@@ -2,47 +2,31 @@ unique template common/core/accounts/access-control;
 
 # Map hosts to users who should have access to them for each group
 variable HOST_USERACCESS_MAP = dict(
-    # /domain/sedf/new-host
+    # /bud/core-services/new-host
     'eon_id_1', dict(
-        'grn', '/domain/sedf/new-host',
+        'grn', '/bud/core-services/new-host',
 
         'default_users', list(),
     ),
 
-    # /domain/sedf/cw
+    # /bud/core-services/core
     'eon_id_2', dict(
-        'grn', '/domain/sedf/cw',
+        'grn', '/bud/core-services/core',
 
         'principals', list(
-            'james',
+            'john',
         ),
 
         'default_users', list(
-            'kate', 'maeve',
+            'patrick', 'thomas',
         ),
 
-        # root password for /domain/sedf/cw hosts
-        'root_pw', 'PASSWDPASSWDPASSWDPASSWD',
-    ),
-
-    # /domain/sp/ap
-    'eon_id_3', dict(
-        'grn', '/domain/sp/ap',
-
-        'default_users', list(
-            'thomas', 'john',
-        ),
-
-        'calculator.example.net', list(
-            'thomas', 'john', 'samuel',
-        ),
-
-        # root password for /domain/sp/ap hosts
-        'root_pw', 'PASSWDPASSWDPASSWDPASSWD',
+        # root password for /bud/core-services/core hosts
+        'root_pw', 'corePASSWDPASSWDPASSWDPASSWD',
     ),
 
     # Default root password for all hosts if not defined above
     'defaults', dict(
-        'root_pw', 'PASSWDPASSWDPASSWDPASSWD',
+        'root_pw', 'defaultPASSWDPASSWDPASSWDPASSWD',
     ),
 );

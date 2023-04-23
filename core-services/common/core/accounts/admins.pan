@@ -14,7 +14,7 @@ include 'common/core/accounts/access-control';
 variable EXTRA_ADMINS ?= list();
 
 # Make James an admin on all systems
-variable admin_users = list('james');
+variable admin_users = list('kay');
 
 # Make group principals admins on their systems
 variable admin_users = if (is_defined('/system/owner_eon_id') && exists(HOST_USERACCESS_MAP[format('eon_id_%s', value('/system/owner_eon_id'))]['principals'])) {
