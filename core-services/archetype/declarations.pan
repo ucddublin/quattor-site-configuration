@@ -1,6 +1,6 @@
 declaration template archetype/declarations;
 
-final variable ARCHETYPE = 'department';
+final variable ARCHETYPE = 'core-services';
 
 final variable QUATTOR_RELEASE = '21.12.0';
 

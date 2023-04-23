@@ -1,6 +1,6 @@
-unique template service/profileserver/department/client/config;
+unique template service/profileserver/core-services/client/config;
 
-'/system/services/profileserver' = create('servicedata/profileserver/department/config');
+'/system/services/profileserver' = create('servicedata/profileserver/core-services/config');
 
 # Configure profileserver settings manually, not from database as the server is
 # not aquilon-managed
