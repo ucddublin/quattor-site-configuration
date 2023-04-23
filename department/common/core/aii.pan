@@ -12,9 +12,11 @@ final variable LPXELINUX = false;
 
 # Indentities of installation servers
 
-#   Anaconda & Packages
+# Anaconda & Packages
 variable AII_OSINSTALL_SRV = value('/system/services/bootserver/servers/0');
-#   Kickstart files
+
+# Kickstart files
 variable AII_KS_SRV = value('/system/services/bootserver/servers/0');
-#   End-of-install notifications
+
+# End-of-installation notifications
 variable AII_ACK_SRV = value('/system/services/bootserver/servers/0');
