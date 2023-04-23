@@ -16,6 +16,7 @@ This collection of templates supports the CentOS and Rocky Linux distributions f
 
 #### Rocky Linux
 - 8x for x86_64 CPU architecture (Intel 64-bit): Tested
+- 8x for aarch_64 CPU architecture (Intel 64-bit): Untested
 
 ### Services Configured
 
@@ -53,8 +54,4 @@ This collection of templates supports the CentOS and Rocky Linux distributions f
 
 ### Other Features Configured
 
-- Mariadb
-- GCC
-- CUDA
-- Fail2Ban
 - Apache with TLS
