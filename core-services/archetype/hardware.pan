@@ -92,7 +92,6 @@ final variable NVIDIA_GPU = {
 # Map hardware models to their firmware types
 variable model_firmware_type_map = dict(
     'default', 'uefi',
-    'mystery-1u-2007-general', 'bios',
     'raspberry-pi-4b-2020-general', 'soc',
 );
 
