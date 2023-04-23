@@ -27,19 +27,11 @@ prefix '/software/components/iptables';
     'jump', 'ACCEPT',
 ));
 
-# Accept all connections with a example.net cable network address
+# Accept all connections with an example.net cable network address
 'filter/rules' = append(SELF, dict(
     'command', '-A',
     'chain', 'INPUT',
-    'source', '172.16.0.0/12',
-    'jump', 'ACCEPT',
-));
-
-# Accept all connections with a example.net wireless network address
-'filter/rules' = append(SELF, dict(
-    'command', '-A',
-    'chain', 'INPUT',
-    'source', '192.168.0.0/16',
+    'source', '192.168.0.0/24',
     'jump', 'ACCEPT',
 ));
 
