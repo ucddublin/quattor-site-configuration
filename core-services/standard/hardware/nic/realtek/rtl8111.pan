@@ -1,6 +1,6 @@
-structure template hardware/nic/realtek/rtl8111h-cg;
+structure template hardware/nic/realtek/rtl8111;
 
-'model' = 'rtl8111h-cg';
+'model' = 'rtl8111';
 'manufacturer' = 'realtek';
 'driver' = 'r8169';
 'pxe' = false;
