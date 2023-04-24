@@ -1,6 +1,6 @@
-structure template hardware/machine/raspberry-pi/4b-2020-general;
+structure template hardware/machine/raspberry-pi/4b-4gb;
 
-'model' = '4b-2020-general';
+'model' = '4b-4gb';
 'manufacturer' = 'raspberry-pi';
 'vendor' = 'farnell';
 'type' = 'service';

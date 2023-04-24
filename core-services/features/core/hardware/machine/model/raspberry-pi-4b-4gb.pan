@@ -1,4 +1,4 @@
-unique template features/core/hardware/machine/model/raspberry-pi-4b-2020-general;
+unique template features/core/hardware/machine/model/raspberry-pi-4b-4gb;
 
 include 'components/cron/config';
 include 'components/filecopy/config';

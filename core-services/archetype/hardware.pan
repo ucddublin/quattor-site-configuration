@@ -92,7 +92,7 @@ final variable NVIDIA_GPU = {
 # Map hardware models to their firmware types
 variable model_firmware_type_map = dict(
     'default', 'uefi',
-    'raspberry-pi-4b-2020-general', 'soc',
+    'raspberry-pi-4b-4gb', 'soc',
 );
 
 final variable FW_TYPE = if (is_defined(model_firmware_type_map[HARDWARE_MODEL])) {
