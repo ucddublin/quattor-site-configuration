@@ -5,7 +5,7 @@ structure template repository/centos/7x-aarch64/os;
 'protocols' = list(
     dict(
         'name', 'http',
-        'url', 'http://mirror.example.net/centos-altarch/7/os/aarch64/',
+        'url', 'http://mirror.wd6.net/centos-altarch/7/os/aarch64/',
     ),
 );
 

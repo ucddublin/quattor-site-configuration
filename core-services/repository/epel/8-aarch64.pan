@@ -5,7 +5,7 @@ structure template repository/epel/8-aarch64;
 'protocols' = list(
     dict(
         'name', 'http',
-        'url', 'http://mirror.example.net/pub/linux/epel/8/Everything/aarch64/',
+        'url', 'http://mirror.wd6.net/epel/8/Everything/aarch64/',
     ),
 );
 

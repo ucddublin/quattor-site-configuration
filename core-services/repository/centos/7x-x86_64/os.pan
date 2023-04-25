@@ -5,7 +5,7 @@ structure template repository/centos/7x-x86_64/os;
 'protocols' = list(
     dict(
         'name', 'http',
-        'url', 'http://mirror.example.net/pub/linux/CentOS/7/os/x86_64/',
+        'url', 'http://mirror.in2p3.fr/pub/linux/CentOS/7/os/x86_64/',
     ),
 );
 

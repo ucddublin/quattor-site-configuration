@@ -5,7 +5,7 @@ structure template repository/epel/7-x86_64;
 'protocols' = list(
     dict(
         'name', 'http',
-        'url', 'http://mirror.example.net/pub/linux/epel/7Server/x86_64/',
+        'url', 'http://mirror.in2p3.fr/pub/epel/7Server/x86_64/',
     ),
 );
 

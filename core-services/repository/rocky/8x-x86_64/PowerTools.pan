@@ -5,7 +5,7 @@ structure template repository/rocky/8x-x86_64/PowerTools;
 'protocols' = list(
     dict(
         'name', 'http',
-        'url', format('http://mirror.example.net/pub/linux/rocky/8/PowerTools/x86_64/%s/', REPO_TYPE),
+        'url', format('http://mirror.in2p3.fr/pub/linux/rocky/8/PowerTools/x86_64/%s/', REPO_TYPE),
     ),
 );
 
