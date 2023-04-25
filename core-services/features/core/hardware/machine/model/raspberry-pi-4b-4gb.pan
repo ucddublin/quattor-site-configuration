@@ -5,9 +5,10 @@ include 'components/filecopy/config';
 include 'components/systemd/config';
 
 # Add repository for Raspberry Pi kernels
-variable OS_REPOSITORY_LIST = append(SELF, 
-    format('centos/%s-%s/kernel/rpi2', value('/system/os/version/name'), value('/system/os/architecture'))
-);
+variable OS_REPOSITORY_LIST = merge(SELF, list(
+    format('centos/%s-%s/kernel/rpi2', value('/system/os/version/name'), value('/system/os/architecture')),
+    format('centos/%s-%s/kernel/generic', value('/system/os/version/name'), value('/system/os/architecture'))
+));
 
 # Install Raspberry Pi kernel, firmware and tools
 '/software/packages' = pkg_repl('raspberrypi2-firmware');
