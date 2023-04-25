@@ -1,4 +1,4 @@
-unique template service/ntp/organisation/client/ntpd;
+unique template service/ntp/bud/client/ntpd;
 
 include 'components/ntpd/config';
 include 'components/systemd/config';

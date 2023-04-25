@@ -1,4 +1,4 @@
-unique template service/ntp/organisation/client/chronyd;
+unique template service/ntp/bud/client/chronyd;
 
 include 'components/metaconfig/config';
 include 'components/systemd/config';

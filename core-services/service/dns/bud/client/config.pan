@@ -1,6 +1,6 @@
-unique template service/dns/organisation/client/config;
+unique template service/dns/bud/client/config;
 
-'/system/services/dns' = create('servicedata/dns/organisation/config');
+'/system/services/dns' = create('servicedata/dns/bud/config');
 
 include 'components/resolver/config';
 

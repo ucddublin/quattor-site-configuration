@@ -1,6 +1,6 @@
-unique template service/ntp/organisation/client/config;
+unique template service/ntp/bud/client/config;
 
-'/system/services/ntp' = create('servicedata/ntp/organisation/config');
+'/system/services/ntp' = create('servicedata/ntp/bud/config');
 
 # Configure ntp settings manually, not from database as the servers are
 # not aquilon-managed
@@ -8,7 +8,7 @@ unique template service/ntp/organisation/client/config;
 '/system/services/ntp/server_ips' = merge(SELF, list('192.168.1.4', '192.168.1.5'));
 
 # Include configuration for ntpd for OS major versions <= 7
-include if (value('/system/os/version/major') <= 7) 'service/ntp/organisation/client/ntpd';
+include if (value('/system/os/version/major') <= 7) 'service/ntp/bud/client/ntpd';
 
 # Include configuration for chronyd for OS major versions >= 8
-include if (value('/system/os/version/major') >= 8) 'service/ntp/organisation/client/chronyd';
+include if (value('/system/os/version/major') >= 8) 'service/ntp/bud/client/chronyd';
