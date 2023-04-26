@@ -4,8 +4,8 @@ unique template service/ntp/bud/client/config;
 
 # Configure ntp settings manually, not from database as the servers are
 # not aquilon-managed
-'/system/services/ntp/servers' = merge(SELF, list('ntp0.example.net', 'ntp1.example.net'));
-'/system/services/ntp/server_ips' = merge(SELF, list('192.168.1.4', '192.168.1.5'));
+'/system/services/ntp/servers' = merge(SELF, list('NTP_HOSTNAME'));
+'/system/services/ntp/server_ips' = merge(SELF, list('NTP_IP_ADDRESS'));
 
 # Include configuration for ntpd for OS major versions <= 7
 include if (value('/system/os/version/major') <= 7) 'service/ntp/bud/client/ntpd';

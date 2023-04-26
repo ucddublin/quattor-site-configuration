@@ -31,7 +31,7 @@ prefix '/software/components/iptables';
 'filter/rules' = append(SELF, dict(
     'command', '-A',
     'chain', 'INPUT',
-    'source', '192.168.0.0/24',
+    'source', 'NET_ADDRESS/NET_PREFIX',
     'jump', 'ACCEPT',
 ));
 

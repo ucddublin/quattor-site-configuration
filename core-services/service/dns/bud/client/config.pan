@@ -6,8 +6,8 @@ include 'components/resolver/config';
 
 # Configure dns settings manually, not from database as the servers are
 # not aquilon-managed
-'/system/services/dns/servers' = merge(SELF, list('dns0.example.net', 'dns1.example.net'));
-'/system/services/dns/server_ips' = merge(SELF, list('192.168.1.2', '192.168.1.3'));
+'/system/services/dns/servers' = merge(SELF, list('DNS_HOSTNAME'));
+'/system/services/dns/server_ips' = merge(SELF, list('DNS_IP_ADDRESS'));
 
 # Configure the name server list
 '/system/network/nameserver' = value('/system/services/dns/server_ips');
