@@ -10,13 +10,13 @@ A collection of Quattor templates for configuring hosts on a computing site.
 
 This collection of templates supports the CentOS and Rocky Linux distributions for a range of CPU architectures.
 
-#### CentOS 
+#### CentOS
 - 7x for x86_64 CPU architecture (Intel 64-bit): Tested
 - 7x for aarch64 CPU architecture (ARM 64-bit): Tested
-- 7x for i386 CPU architecture (Intel 32-bit): Untested
 
 #### Rocky Linux
 - 8x for x86_64 CPU architecture (Intel 64-bit): Tested
+- 8x for aarch_64 CPU architecture (Intel 64-bit): Untested
 
 ### Services Configured
 
@@ -54,8 +54,4 @@ This collection of templates supports the CentOS and Rocky Linux distributions f
 
 ### Other Features Configured
 
-- Mariadb
-- GCC
-- CUDA
-- Fail2Ban
 - Apache with TLS
