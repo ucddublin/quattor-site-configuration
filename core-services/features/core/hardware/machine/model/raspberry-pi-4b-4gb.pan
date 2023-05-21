@@ -50,24 +50,18 @@ variable DISK_EXTRA_PARTITIONS = append(SELF, dict(
     'mountpoint', '/home',
 ));
 
-# Add cron job to synchronise clock with NTP server not long after booting
-'/software/components/cron/entries' ?= list();
-'/software/components/cron/entries' = append(SELF, dict(
-    'name', 'sync-clock',
-    'user', 'root',
-    'group', 'root',
-    'frequency', '@reboot',
-    'command', format('sleep 60s; && /usr/sbin/ntpdate -u %s', value('/system/services/ntp/servers/0')),
-));
-
-# Configure Raspberry Pi boot config to enable real-time clock
+# Configure Raspberry Pi boot config to disable WiFi, Bluletooth and enable the
+# real-time clock: use 'pcf2127' for the 'RasClock V4.2' and 'ds1307' for the
+# 'Pi Hut Mini RTC Module'
 variable rpi_boot_config = <<EOF;
 # CentOS doesn't use any default config options to work,
 # this file is provided as a placeholder for user options
 # Please read /boot/overlays/README too for additional information
 
+dtoverlay=disable-wifi
+dtoverlay=disable-bt
 dtparam=i2c_arm=on
-dtoverlay=i2c-rtc,ds1307
+dtoverlay=i2c-rtc,pcf2127
 EOF
 
 prefix '/software/components/filecopy/services/{/boot/config.txt}';
