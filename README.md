@@ -5,6 +5,7 @@ A collection of Quattor templates for configuring hosts on a computing site.
 
 - [Quattor website](https://www.quattor.org)
 - [Contribute to Quattor on GitHub](https://github.com/quattor)
+- [This project's wiki, including documentation](https://github.com/ucddublin/quattor-site-configuration/wiki)
 
 ### Supported Operating Systems
 
